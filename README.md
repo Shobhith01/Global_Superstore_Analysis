@@ -10,9 +10,8 @@
 <p align="center">
   End-to-end data analysis of <strong>51,290 global retail orders</strong> across
   7 markets and 4 years — uncovering profit drivers, loss-making products
-  and actionable business recommendations using SQL, Excel and Power BI.
+  and actionable business recommendations using <strong>SQL</strong>, <strong>Excel</strong> and <strong>Power BI</strong>.
 </p>
-
 ---
 
 ## 📌 Key Business Findings
