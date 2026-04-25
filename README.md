@@ -1,30 +1,48 @@
-# Global Superstore Sales & Profit Analysis
+# 📊 Global Superstore Sales Analysis
 
-## 📊 Project Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PowerBI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Status-In%20Progress-orange?style=for-the-badge"/>
+</p>
 
-Comprehensive **SQL-based business analysis** of the Global Superstore dataset containing **51,290 orders** across 7 global markets from 2011 to 2014.
+<p align="center">
+  End-to-end data analysis of <strong>51,290 global retail orders</strong> across
+  7 markets and 4 years — uncovering profit drivers, loss-making products
+  and actionable business recommendations using SQL, Excel and Power BI.
+</p>
 
-This project focuses on uncovering key business insights related to **sales performance, profitability, discount impact, product performance, customer segmentation, and operational efficiency** using MySQL.
+---
 
-**Objective**: Identify profit-driving and loss-making areas, evaluate discount strategies, and provide actionable recommendations to improve overall business margins.
+## 📌 Key Business Findings
 
-## 🛠️ Tools & Technologies
-- **MySQL** (Primary)
-  - Advanced SQL concepts:
-  - Aggregate Functions
-  - Window Functions 
-  - Common Table Expressions (CTEs)
-  - Subqueries and Conditional Logic
+| # |                                    Finding                                          |         Impact        |
+|---|-------------------------------------------------------------------------------------|-------------------------|
+| 1 | Tables sub-category has **-8.46% profit margin** despite high sales volume          | 🔴 High Priority        |
+| 2 | Discounts above **20% produce negative margins** across ALL categories              | 🔴 Policy Change Needed |
+| 3 | **57.6% of Tables orders** lose money — highest loss rate of any sub-category       | 🔴 Immediate Review     |
+| 4 | **APAC leads revenue** at $3.6M but Canada has best margin at **26.62%**            | 🟡 Strategy Insight     |
+| 5 | 2014 growth was **discount-driven** — margin dipped from 11.95% → 11.73%            | 🟡 Risk Flag            |
+| 6 | Paper sub-category is most stable — lowest loss order rate at **14.9%**             | 🟢 Best Performer       |
+| 7 | Copiers generate highest profit margin — **technology is the strongest category**   | 🟢 Scale Up             |
 
-## 📁 Project Structure
+---
+
+## 🗂️ Project Structure
+
+```
 global-superstore-analysis/
-├── dataset/                    # Original dataset files
+│
+├── dataset/                              # Original dataset files
 │   ├── Global_Superstore2.csv
 │   └── Global_Superstore2.xlsx
-├── queries/                    # SQL scripts
-│   ├── Superstore data analysis.sql
-│   └── queries.sql
-├── outputs/                    # Query results (11 key outputs)
+│
+├── queries/                              # SQL scripts
+│   └── Superstore_data_analysis.sql      # Complete analysis — 9 sections, 35+ queries
+│
+├── outputs/                              # Query results & documentation
+│   ├── 1_Insights.md                     # Key findings & analysis summary
 │   ├── B1_overall_performance.csv
 │   ├── B2_yearly_performance.csv
 │   ├── C1_market_performance.csv
@@ -36,65 +54,138 @@ global-superstore-analysis/
 │   ├── E1_segment_analysis.csv
 │   ├── I1_executive_summary.csv
 │   └── J1_pareto_top10pct_customers.csv
+│
+├── Excel/                               # 🔄 In Progress
+│   └── coming_soon.md
+│
+├── PowerBI/                             # 🔄 Yet to start
+│   └── coming_soon.md
+│
 └── README.md
+```
 
+---
 
-## 🔍 Key Insights & Findings
+## 🛠️ Tools & Skills Used
 
-- **Tables** sub-category is a major loss-maker due to high discounts resulting in negative profit margins.
-- Discounts **above 20%** consistently lead to losses across almost all categories — strong recommendation to review and cap discount policies.
-- **APAC** market generates the highest sales volume but has relatively lower profit margins.
-- **Canada** stands out with the highest profit margin (~26.62%).
-- **Technology** category (especially **Copiers**) is highly profitable, while **Furniture** (particularly Tables) needs attention to improve margins.
-- **Top 10% of customers** contribute approximately **26%** of total profit (Pareto principle) — highlighting the importance of high-value customer retention.
-- Some sub-categories lose money on **40-60%** of their orders.
+| Tool | Skills Demonstrated |
+|------|-------------------|
+| **MySQL 8.0** | Aggregate Functions · GROUP BY · HAVING · Subqueries · CTEs · Window Functions (LAG · RANK · DENSE_RANK · SUM OVER) · LOAD DATA INFILE · Date Functions · CASE WHEN · DATEDIFF · STR_TO_DATE |
+| **Excel** *(In Progress)* | Pivot Tables · Slicers · Conditional Formatting · Charts · Dashboard Design |
+| **Power BI** *(In Progress)* | DAX Measures · Data Modelling · Interactive Visuals · Published Dashboard |
 
-## 📈 Analysis Sections Covered
+---
 
-- Exploratory Data Analysis (Data overview, time period, markets, segments)
-- Overall Business Performance (Total sales, profit, margin, yearly growth)
-- Market & Region Analysis (Performance by market, top countries, regional profitability)
-- Product Category & Sub-category Analysis (**Most important section** — identifies loss-making products)
-- Customer & Segment Analysis (Consumer, Corporate, Home Office performance)
-- Shipping & Operations Analysis
-- Discount Impact Analysis (Critical business insight)
-- Advanced SQL (Window functions, ranking, running totals, YoY growth)
-- Executive Summary & Loss-making Analysis
+## 📂 SQL Analysis — Section Breakdown
 
-## 🚀 How to Run the Project
+| Section | Description | Key Query Type |
+|---------|-------------|---------------|
+| **A — Exploratory** | Understand data structure, row counts, unique values | Basic SELECT |
+| **B — Business Performance** | Overall KPIs, yearly and monthly trends | Aggregation |
+| **C — Market & Region** | Market rankings, regional profit analysis | GROUP BY + ORDER BY |
+| **D — Product Analysis** | Category, sub-category, top/bottom products | Nested Aggregation |
+| **E — Customer & Segment** | Segment profitability, top/bottom customers | Multi-column GROUP BY |
+| **F — Shipping & Operations** | Ship mode analysis, priority vs cost | DATEDIFF · AVG |
+| **G — Discount Analysis** | Discount buckets, impact on margin | CASE WHEN |
+| **H — Advanced Window Functions** | YoY growth, running totals, rankings | LAG · RANK · SUM OVER |
+| **I — Executive Summary** | Full business scorecard, loss analysis | CTE · WITH clause |
 
-1. Create the database:
-   ```sql
-   CREATE DATABASE superstore_db;
-   USE superstore_db;
+---
 
-Execute the table creation and data loading script from queries/Superstore data analysis.sql
-Run the analysis queries section by section.
+## 📈 Business Recommendations
 
-Note: Date conversion (Step 1B) is required if importing raw CSV in MySQL.
+1. **Cap discounts at 20%** — any discount above this threshold consistently destroys profit margins across all product categories. Orders above 50% discount result in -111% margin collapse
+2. **Review Tables pricing immediately** — -8.46% profit margin driven by 29% average discount. Either raise prices, reduce discounts, or discontinue low-margin SKUs
+3. **Replicate Canada's low-discount model** — 26.62% margin is the highest of any market. Apply this pricing discipline cautiously across LATAM and EMEA regions
+4. **Prioritise top customer retention** — top 15 customers generate disproportionate profit. A dedicated retention or loyalty programme would protect revenue significantly
+5. **Investigate LATAM-South urgently** — lowest regional margin at 4.55% with no clear volume compensation. Needs full cost structure and pricing review
+6. **Scale Paper and Copiers** — both show strong, stable margins with low loss rates. Increased marketing spend here would yield high ROI
 
+---
 
-📋 Key Skills Demonstrated
+## 🗃️ Dataset Details
 
-End-to-end SQL data analysis
-Business-oriented problem solving
-Identifying actionable insights from raw data
-Writing clean, well-commented, and structured SQL code
-Using advanced SQL features for deeper insights
+| Field | Details |
+|-------|---------|
+| **Source** | Kaggle — Global Superstore Dataset |
+| **Total Rows** | 51,290 orders |
+| **Period** | 2011 – 2014 (4 years) |
+| **Markets** | 7 (APAC · EU · US · LATAM · Africa · EMEA · Canada) |
+| **Categories** | 3 (Technology · Furniture · Office Supplies) |
+| **Sub-Categories** | 17 |
+| **Unique Customers** | 1,590 |
+| **Countries** | 147 |
 
-🔮 Future Enhancements (Planned)
+---
 
-Excel-based analysis and pivot tables on the same dataset
-Interactive Power BI dashboard for visualizations
-Customer segmentation using RFM analysis
-Sales forecasting models
+## ▶️ How to Run the SQL Project
 
-📄 Documentation
-All key query outputs are available in the /outputs folder for quick reference.
+```sql
+-- Step 1: Open MySQL Workbench and create a new schema
+CREATE DATABASE superstore_db;
+USE superstore_db;
 
-Author: Shobhith Kounder
-Dataset Source: Kaggle - Global Superstore
-Last Updated: 25 April 2026
+-- Step 2: Run the CREATE TABLE block from the .sql file
 
-⭐ If you found this project helpful, please consider starring the repository!
-Feel free to reach out for any questions or suggestions.
+-- Step 3: Load data using LOAD DATA LOCAL INFILE
+-- (update file path to match your local machine)
+
+-- Step 4: Run each section A through I in order
+-- Each section is clearly labelled with comments
+```
+
+> ⚠️ **Note:** Enable `local_infile` on both client and server before running LOAD DATA.
+> In MySQL Workbench: Edit → Preferences → SQL Editor → check Allow Loading Local Data.
+> Then run: `SET GLOBAL local_infile = 1;`
+
+---
+
+## 📊 Sample Output — Business Scorecard (Query I1)
+
+| Metric | Value |
+|--------|-------|
+| Total Orders | 25,025 |
+| Total Customers | 1,590 |
+| Countries Served | 147 |
+| Total Revenue | $12,642,501 |
+| Total Profit | $1,467,457 |
+| Overall Margin | 11.61% |
+| Avg Discount | 14.3% |
+| Avg Ship Days | 4.0 days |
+| Loss-Making Orders | ~30% |
+
+---
+
+## 🚧 Project Roadmap
+
+- [x] SQL Analysis — 9 sections, 35+ queries, 11 CSV outputs
+- [x] GitHub Repository setup with full documentation
+- [ ] Excel Dashboard — Pivot tables, slicers, purple executive theme
+- [ ] Power BI Dashboard — DAX measures, interactive report, published link
+- [ ] Resume updated with project findings
+- [ ] LinkedIn post with dashboard screenshots
+
+---
+
+## 👤 Author
+
+**Shobhith S Kounder**
+Aspiring Data Analyst · SQL · Excel · Power BI
+📍 Sringeri, Karnataka — Open to relocation anywhere in India
+
+<p>
+  <a href="https://www.linkedin.com/in/shobhith-kounder-768859264">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
+  <a href="https://github.com/Shobhith01">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</p>
+
+---
+
+<p align="center">
+  <i>This project is part of a 14-day data analyst portfolio challenge —
+  building job-ready projects in SQL, Excel and Power BI to land
+  a data analyst role in Bengaluru.</i>
+</p>
