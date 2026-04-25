@@ -16,7 +16,7 @@
 
 ## 📌 Key Business Findings
 
-| # |                                    Finding                                          |         Impact        |
+| # |                                    Finding                                          |         Impact          |
 |---|-------------------------------------------------------------------------------------|-------------------------|
 | 1 | Tables sub-category has **-8.46% loss margin** despite high sales volume            | 🔴 High Priority        |
 | 2 | Discounts above **20% produce negative margins** across ALL categories              | 🔴 Policy Change Needed |
