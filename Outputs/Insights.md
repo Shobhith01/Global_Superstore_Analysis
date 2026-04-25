@@ -3,12 +3,12 @@
 ## Dataset Overview
 |       Metric     |       Value      |
 |------------------|------------------|
-| Total Orders     | 25,025           |
-| Total Rows       | 51,290           |
-| Total Revenue    | $12,642,501      |
-| Total Profit     | $1,467,457       |
-| Profit Margin    | 11.61%           |
-| Years Covered    | 2011 – 2014      |
+| Total Orders     |            25,025|
+| Total Rows       |            51,290|
+| Total Revenue    |       $12,642,501|
+| Total Profit     |        $1,467,457|
+| Profit Margin    |            11.61%|
+| Years Covered    |       2011 – 2014|
 | Markets          | 7 Global Markets |
 | Countries        | 147 Countries    |
 
