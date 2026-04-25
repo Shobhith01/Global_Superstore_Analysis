@@ -18,7 +18,7 @@
 
 | # |                                    Finding                                          |         Impact        |
 |---|-------------------------------------------------------------------------------------|-------------------------|
-| 1 | Tables sub-category has **-8.46% profit margin** despite high sales volume          | 🔴 High Priority        |
+| 1 | Tables sub-category has **-8.46% loss margin** despite high sales volume            | 🔴 High Priority        |
 | 2 | Discounts above **20% produce negative margins** across ALL categories              | 🔴 Policy Change Needed |
 | 3 | **57.6% of Tables orders** lose money — highest loss rate of any sub-category       | 🔴 Immediate Review     |
 | 4 | **APAC leads revenue** at $3.6M but Canada has best margin at **26.62%**            | 🟡 Strategy Insight     |
